@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyProfile Page</title>
+</head>
+<body>
+		<form method="post">
+			<fieldset>
+				<legend>Profile</legend>
+				<table>
+                    <tr>
+                        <td>ID</td>
+                        <td>: <%= id %></td>
+                    </tr>
+					<tr>
+						<td>EmpName</td>
+						<td>: <%=EmpName%></td>
+                    </tr>
+                    <tr>
+						<td>EmpPhone</td>
+						<td>: <%=EmpPhone%></td>
+                    </tr>
+                    <tr>
+						<td>EmpAddress</td>
+						<td>: <%=EmpAddress%></td>
+                    </tr>
+                    <tr>
+						<td>EmpGender</td>
+						<td>: <%=EmpGender%></td>
+                    </tr>
+                    <tr>
+						<td>EmpDesignation</td>
+						<td>: <%=EmpDesignation%></td>
+					</tr><br>
+                </table>
+                <a href="/logout">Logout</a>
+			</fieldset>
+		</form>
+</body>
+</html>

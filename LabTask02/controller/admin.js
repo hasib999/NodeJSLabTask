@@ -1,6 +1,6 @@
 var express   = require('express');
 var router    = express.Router();
-var data        =require('../data');
+var data      =require('../data');
 
 var emplo=data();
 
@@ -40,7 +40,5 @@ router.get('/delete/:id',function(req,res){
 	emplo.deleteEmployee(req.params.id);
 	res.redirect('/admin/AllEmployeeList');
 });
-
-
 
 module.exports = router;
