@@ -36,6 +36,11 @@ router.post('/update/:id',function(req,res){
 	res.redirect('/admin/AllEmployeeList');
 });
 
+router.get('/delete/:id',function(req,res){
+	emplo.deleteEmployee(req.params.id);
+	res.redirect('/admin/AllEmployeeList');
+});
+
 
 
 module.exports = router;

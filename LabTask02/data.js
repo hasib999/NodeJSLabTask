@@ -24,13 +24,13 @@ module.exports=function(){
                 }
             }
         },
-        // deleteEmployee:function(id){
-        //     for(var i=0;i<employee.length;i++){
-        //         if(employee[i].id==id){
-        //             employee.splice(i,1);
-        //         }
-        //     }
-        // }
+        deleteEmployee:function(id){
+            for(var i=0;i<employee.length;i++){
+                if(employee[i].id==id){
+                    employee.splice(i,1);
+                }
+            }
+        }
 
     }
 }
