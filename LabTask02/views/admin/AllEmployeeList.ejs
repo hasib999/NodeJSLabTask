@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<title>Employee List</title>
 </head>
 <body>
 		<form method="post">
@@ -14,6 +14,7 @@
                         <th>Name</th>
                         <th>Phone</th>
                         <th>Gender</th>
+                        <th>Address</th>
                         <th>Designation</th>
                         <th>Action</th>
                       </tr>
@@ -21,13 +22,13 @@
                     <tbody>
                     <%allEmployeeList.forEach(function(emp){%>
                       <tr>
-                        <td><%=emp.id%></td>
-                        <td><%=emp.empName%></td>
-                        <td><%=emp.empPhone%></td>
-                        <td><%=emp.empAddress%></td>
-                        <td><%=emp.empGender%></td>
-                        <td><%=emp.empDesignation%></td>
-                        <td><a href="/admin/update<%=emp.id%>">Update</a><br><a href="/admin/delete<%=emp.id%>">Delete</a></td>
+                        <td><%= emp.id %></td>
+                        <td><%= emp.EmpName %></td>
+                        <td><%= emp.EmpPhone %></td>
+                        <td><%= emp.EmpGender %></td>
+                        <td><%= emp.EmpAddress %></td>
+                        <td><%= emp.EmpDesignation %></td>
+                        <td><a href="/admin/update/<%= emp.id %>">Update</a><br><a href="/admin/delete/<%=emp.id%>">Delete</a></td>
                       </tr>
                       
                     <%  })%> 

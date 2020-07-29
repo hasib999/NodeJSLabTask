@@ -5,7 +5,7 @@ module.exports=function(){
         getAllemployee:function(){
             return employee;
         },
-        getEmployee:function(){
+        getEmployee:function(id){
             for(var i=0;i<employee.length;i++){
                 if(employee[i].id==id){
                     return employee[i];
@@ -17,5 +17,20 @@ module.exports=function(){
             emp.id=id;
             employee.push(emp);
         },
+        updateEmployee:function(emp){
+            for(var i=0;i<employee.length;i++){
+                if(employee[i].id==emp.id){
+                    return employee[i]=emp;
+                }
+            }
+        },
+        // deleteEmployee:function(id){
+        //     for(var i=0;i<employee.length;i++){
+        //         if(employee[i].id==id){
+        //             employee.splice(i,1);
+        //         }
+        //     }
+        // }
+
     }
 }
