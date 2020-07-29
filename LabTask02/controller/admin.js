@@ -1,22 +1,28 @@
 var express   = require('express');
 var router    = express.Router();
-var data      =require('../data');
+var DB        =require('../data');
 
-var employees=data();
+var emp=DB();
 
 router.get('/', function(req, res){
 	res.render('admin/index');
 });
 
-router.get('/addEmployee',function(req,res){
+router.get('/AddEmployee',function(req,res){
 	res.render('admin/AddEmployee')
 });
 
-router.post('/', function(req, res){
-
-	res.send('Wellcome to Admin page');
-	
-	
+router.get('/AllEmployeeList',function(req,res){
+	var allEmp=emp.getAllemployee();
+	var data={allEmployeeList:allEmp}
+	res.render('admin/AllEmployeeList',data);
 });
+router.post('/addEmployee',function(req,res){
+	emp.createEmployee(req.body);
+	res.redirect('/admin/allEmployeeList');
+});
+
+
+
 
 module.exports = router;

@@ -7,7 +7,7 @@
 		<form method="post">
 			<fieldset>
 				<legend>Employee List</legend>
-				<table class="tg">
+				<table border="1">
                     <thead>
                       <tr>
                         <th>EmpID</th>
@@ -19,16 +19,24 @@
                       </tr>
                     </thead>
                     <tbody>
+                    <%allEmployeeList.forEach(function(emp){%>
                       <tr>
-                          <td>1</td>
-                          <td>Hasib</td>
-                          <td>01778578380</td>
-                          <td>Male</td>
-                          <td>Manager</td>
-                          <td><a href="/update">Update</a><br><a href="/delete">Delete</a></td>
+                        <td><%=emp.id%></td>
+                        <td><%=emp.empName%></td>
+                        <td><%=emp.empPhone%></td>
+                        <td><%=emp.empAddress%></td>
+                        <td><%=emp.empGender%></td>
+                        <td><%=emp.empDesignation%></td>
+                        <td><a href="/admin/update<%=emp.id%>">Update</a><br><a href="/admin/delete<%=emp.id%>">Delete</a></td>
+                      </tr>
+                      
+                    <%  })%> 
+                      <tr>
+                          
                       </tr>
                     </tbody>
                     </table>
+                    <a href="/logout">Logout</a>
 			</fieldset>
 		</form>
 </body>

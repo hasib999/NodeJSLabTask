@@ -13,7 +13,7 @@ module.exports=function(){
             }
         },
         createEmployee:function(emp){
-            const id=employee.length+1;
+            var id=employee.length+1;
             emp.id=id;
             employee.push(emp);
         },
